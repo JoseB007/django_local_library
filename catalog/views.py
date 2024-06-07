@@ -26,7 +26,7 @@ def index(request):
     # El 'all()' esta implícito por defecto.
     num_authors = Author.objects.count()
     num_genre = Genre.objects.count()
-    el_books = Book.objects.filter(title__icontains='el').count()
+    # el_books = Book.objects.filter(title__icontains='el').count()
 
     # Sesiones
     # del request.session['num_visitas']
@@ -40,7 +40,7 @@ def index(request):
             'num_instances_available': num_instances_available, 
             'num_authors': num_authors, 
             'num_genre': num_genre, 
-            'el_books': el_books,
+            # 'el_books': el_books,
             'num_visitas': num_visitas}
  
     # Renderiza la plantilla HTML index.html con los datos en la variable contexto
